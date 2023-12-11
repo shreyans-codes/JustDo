@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: prod
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Iv1.811f6c851fbef59a
+            clientSecret: e12ce2f7cfcbadebfe8f4ae99359612a9b35df81
+          google:
+            clientId: 1010975806783-jvga3rtqmrdnnmv1k03hr32q30n48e6v.apps.googleusercontent.com
+            clientSecret: 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
+  error:
+    include-message: always
+#  url: http://localhost:5173
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+server:
+  contextPath: /JustDo-0.0.1

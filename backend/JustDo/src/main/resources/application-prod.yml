@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/todo_service
+    username: sheru
+    password: Shreyans@2801
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Iv1.811f6c851fbef59a
+            clientSecret: e12ce2f7cfcbadebfe8f4ae99359612a9b35df81
+          google:
+            clientId: 1010975806783-n78pmlkbojjvtn29t3pab2mugva2qp1o.apps.googleusercontent.com
+            clientSecret: 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
+
+frontend:
+  url: https://just-do.int.cyraacs.in
