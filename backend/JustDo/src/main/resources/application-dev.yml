@@ -19,8 +19,8 @@ spring:
             clientId: Iv1.811f6c851fbef59a
             clientSecret: e12ce2f7cfcbadebfe8f4ae99359612a9b35df81
           google:
-            clientId: 1010975806783-jvga3rtqmrdnnmv1k03hr32q30n48e6v.apps.googleusercontent.com
-            clientSecret: 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
+            clientId: 1010975806783-n78pmlkbojjvtn29t3pab2mugva2qp1o.apps.googleusercontent.com
+            clientSecret: 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
 
 frontend:
-  url: https://just-do.int.cyraacs.in
+  url: https://just-do.com

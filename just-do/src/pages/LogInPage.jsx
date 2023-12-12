@@ -47,62 +47,75 @@ const LogInPage = () => {
   };
 
   return (
-    <div style={{ height: "100vh" }}>
-      <div className="grid" style={{ gridTemplateColumns: "7fr 5fr" }}>
-        <SideImageComponent />
-        <div className="form-control w-full max-w-lg m-auto">
-          <article className="prose">
-            <h1>Log in to your account</h1>
-          </article>
-          <div>
-            <label className="label">
-              <span className="label-text">Username</span>
-            </label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Type here"
-              className="input input-bordered w-full"
-            />
-          </div>
+    <div
+      style={{
+        height: "100vh",
+        position: "relative",
+        backgroundImage: `url("https://source.unsplash.com/random?wallpapers")`,
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+        display: "flex",
+      }}
+    >
+      {/* <SideImageComponent /> */}
+      <div className="p-5 form-control bg-blend-darken rounded-xl bg-stone-800 bg-opacity-60 w-full max-w-lg m-auto">
+        <article className="prose">
+          <h1>Log in to your account</h1>
+        </article>
+        <div>
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text">Username</span>
           </label>
           <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             placeholder="Type here"
             className="input input-bordered w-full"
           />
-          <ReCAPTCHA
-            className="mt-4 p-0 "
-            theme="dark"
-            sitekey={
-              IS_HOSTED
-                ? "6Lct5ScpAAAAAHVISfRd2LvEjihktk2OMT1ZmO4z"
-                : "6LeNoxgpAAAAAD0m0CTHEgxFI4C1mcIqbBHzncWB"
-            }
-            onChange={verifyRecaptcha}
-          />
-          <button
-            disabled={!isVerified}
-            className="btn btn-info mt-10"
-            onClick={loginToAccount}
-          >
-            Log In
-          </button>
-          {/* 
+        </div>
+        <label className="label">
+          <span className="label-text">Password</span>
+        </label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Type here"
+          className="input input-bordered"
+        />
+        <ReCAPTCHA
+          className="mt-4 p-0 w-full "
+          theme="dark"
+          style={{
+            overflow: "hidden",
+            width: "302px",
+            height: "76px",
+            borderRadius: "3px",
+          }}
+          sitekey={
+            IS_HOSTED
+              ? "6Lct5ScpAAAAAHVISfRd2LvEjihktk2OMT1ZmO4z"
+              : "6LeNoxgpAAAAAD0m0CTHEgxFI4C1mcIqbBHzncWB"
+          }
+          onChange={verifyRecaptcha}
+        />
+        <button
+          disabled={!isVerified}
+          className="btn btn-info mt-10"
+          onClick={loginToAccount}
+        >
+          Log In
+        </button>
+        {/* 
            // TODO: Have a Forgot Password button 
           */}
-          <span className="mx-auto mt-2">
-            {"Don't have an account? "}
-            <a className="link-primary" href="/signup">
-              Sign Up
-            </a>
-          </span>
-        </div>
+        <span className="mx-auto mt-2">
+          {"Don't have an account? "}
+          <a className="link-primary" href="/signup">
+            Sign Up
+          </a>
+        </span>
       </div>
     </div>
   );

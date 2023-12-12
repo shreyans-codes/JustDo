@@ -5,9 +5,10 @@ const SideImageComponent = () => {
     <img
       src="https://source.unsplash.com/random?wallpapers"
       alt="Wallpaper"
-      className="h-[100vh] w-full"
+      className="w-full h-full"
       style={{
-        backgroundSize: "cover",
+        objectFit: "cover",
+        position: "absolute",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundColor: "dodgerblue",
