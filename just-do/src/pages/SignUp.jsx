@@ -91,6 +91,7 @@ const SignUp = () => {
   return (
     <div
       style={{
+        height: "100vh",
         position: "relative",
         backgroundImage: `url("https://source.unsplash.com/random?wallpapers")`,
         backgroundSize: "cover",
@@ -101,7 +102,7 @@ const SignUp = () => {
       {/* <SideImageComponent /> */}
       <div className="p-5 form-control bg-blend-darken rounded-xl bg-stone-800 bg-opacity-60 w-full max-w-lg m-auto">
         <article className="prose">
-          <h1>SignUp to Food Quest</h1>
+          <h1>SignUp to Just Do</h1>
         </article>
         <div className="grid grid-cols-2 gap-4 mt-2">
           <div>
@@ -129,47 +130,59 @@ const SignUp = () => {
             />
           </div>
         </div>
-        <label className="label">
-          <span className="label-text">Email</span>
-        </label>
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Type here"
-          className="input input-bordered w-full"
-        />
-        <label className="label">
-          <span className="label-text">Username</span>
-        </label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Type here"
-          className="input input-bordered w-full"
-        />
-        <label className="label">
-          <span className="label-text">Password</span>
-        </label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Type here"
-          className="input input-bordered w-full"
-          autoComplete="new-password"
-        />
-        <label className="label">
-          <span className="label-text">Confirm Password</span>
-        </label>
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Type here"
-          className="input input-bordered w-full"
-        />
+        <div className="grid grid-cols-2 gap-4 mt-2">
+          <div>
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Type here"
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div>
+            <label className="label">
+              <span className="label-text">Username</span>
+            </label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Type here"
+              className="input input-bordered w-full"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4 mt-2">
+          <div>
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Type here"
+              className="input input-bordered w-full"
+              autoComplete="new-password"
+            />
+          </div>
+          <div>
+            <label className="label">
+              <span className="label-text">Confirm Password</span>
+            </label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Type here"
+              className="input input-bordered w-full"
+            />
+          </div>
+        </div>
         <div className="">
           <label className="label cursor-pointer">
             <span className="label-text">Enable MFA?</span>
